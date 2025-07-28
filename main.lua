@@ -5,6 +5,12 @@ print("██      ██    ██    ██   ██ ██ ██    ██ �
 print("██      ██    ██    ███████ ██ ██    ██ ██ ████ ██ ")
 print("██      ██    ██    ██   ██ ██ ██    ██ ██  ██  ██ ")
 print("███████ ██    ██    ██   ██ ██  ██████  ██      ██ ")
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Lithium",
+        Text = "Name credit goes to lithium.1on on discord.",
+        Duration = 5
+    })
                                                    
                                                    
 local placeId = game.PlaceId
