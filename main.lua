@@ -1,3 +1,17 @@
+local StarterGui = game:GetService("StarterGui")
+local setclipboard = setclipboard or toclipboard
+
+if setclipboard then
+    setclipboard("https://discord.gg/uNBDgnsM5W")
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "Lithium Loader",
+    Text = "Loading Lithium, discord copied to clipboard please join to support our non profit projects",
+    Duration = 4,
+    Button1 = "Okay"
+})
+wait(5)
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
