@@ -36,7 +36,7 @@ end
 
 local placeId = game.PlaceId
 
-if placeId == 4588604953 or placeId == 8343259840 or placeId == 15169303036 then
+if placeId == 4588604953 or placeId == 8343259840 or placeId == 15169303036 or placeId == 15169306359 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sempiller/Lithium/refs/heads/main/Criminality.lua"))()
 
 elseif placeId == 286090429 then 
