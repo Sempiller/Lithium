@@ -1,9 +1,17 @@
-local StarterGui = game:GetService("StarterGui")
-local setclipboard = setclipboard or toclipboard
+local SupportedGames = {
+    [4588604953] = "Criminality",
+    [8343259840] = "Criminality",
+    [15169303036] = "Criminality",
+    [15169306359] = "Criminality",
+    [15169310267] = "Criminality",
+    [286090429] = "Arsenal"
+}
 
 if setclipboard then
     setclipboard("https://discord.gg/uNBDgnsM5W")
 end
+
+local StarterGui = game:GetService("StarterGui")
 
 StarterGui:SetCore("SendNotification", {
     Title = "Lithium Loader",
@@ -30,17 +38,15 @@ StarterGui:SetCore("SendNotification", {
     Button1 = "Okay"
 })
 wait(5)
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
 
-local placeId = game.PlaceId
+local gameType = SupportedGames[game.PlaceId]
 
-if placeId == 4588604953 or placeId == 8343259840 or placeId == 15169303036 or placeId == 15169306359 then
+if gameType == "Criminality" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sempiller/Lithium/refs/heads/main/Criminality.lua"))()
 
-elseif placeId == 286090429 then 
+elseif gameType == "Arsenal" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sempiller/Lithium/refs/heads/main/Arsenal.lua"))()
+
 else
-    print("Lithium Loader: Unregistered PlaceId -> " .. tostring(placeId))
+    warn("Lithium Loader: Unregistered PlaceId -> " .. tostring(game.PlaceId))
 end
