@@ -42,6 +42,8 @@ wait(5)
 local gameType = SupportedGames[game.PlaceId]
 
 if gameType == "Criminality" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua",true))()
+    wait(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sempiller/Lithium/refs/heads/main/Criminality.lua"))()
 
 elseif gameType == "Arsenal" then
