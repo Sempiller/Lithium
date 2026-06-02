@@ -37,6 +37,8 @@ StarterGui:SetCore("SendNotification", {
     Duration = 4,
     Button1 = "Okay"
 })
+
+setfflag("EnableDeviceBlocks", "false")
 wait(5)
 
 local gameType = SupportedGames[game.PlaceId]
