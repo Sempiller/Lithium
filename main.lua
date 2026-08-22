@@ -26,6 +26,8 @@ wait(5)
 local gameType = SupportedGames[game.PlaceId]
 
 if gameType == "Criminality" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sempiller/AdonisBP/refs/heads/main/bypass.lua"))()
+    wait(3)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Sempiller/Lithium/refs/heads/main/Criminality.lua"))()
 
 elseif gameType == "Arsenal" then
