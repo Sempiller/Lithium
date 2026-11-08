@@ -4,7 +4,7 @@ local B64 = "iVBORw0KGgoAAAANSUhEUgAABPsAAALJCAYAAADChiarAAAAAXNSR0IArs4c6QAAAAR
 local SHOW_TIME = 10
 local FILE_NAME = "b64_image_tmp.png"
 
--- Base64 decode (uses executor function if available, otherwise a pure Lua fallback)
+-- uses executor function if available otherwise a pure lua fallback
 local function decode(data)
     local fn = (crypt and crypt.base64decode)
         or (crypt and crypt.base64 and crypt.base64.decode)
@@ -31,12 +31,10 @@ local function decode(data)
     end))
 end
 
--- Turn the decoded bytes into a Roblox-usable asset
 writefile(FILE_NAME, decode(B64))
 local getAsset = getcustomasset or getsynasset
 local assetId = getAsset(FILE_NAME)
 
--- Build the GUI
 local parent = (gethui and gethui()) or game:GetService("CoreGui")
 local gui = Instance.new("ScreenGui")
 gui.Name = "Base64ImageViewer"
